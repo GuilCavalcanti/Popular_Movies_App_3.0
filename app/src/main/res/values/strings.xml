@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Popular Movies App</string>
+    <string name="sort">Sort Movies</string>
+    <string name="sort_by_popularity">Most Popular</string>
+    <string name="sort_by_rating">Highest Rated</string>
+
+    <string name="movie_title_label">Title:</string>
+    <string name="movie_title">DEFAULT_TITLE</string>
+    <string name="movie_release_date_label">Release Date:</string>
+    <string name="movie_release_date">10/10/10</string>
+    <string name="movie_vote_average_label">Vote Average:</string>
+    <string name="movie_vote_average">9.5</string>
+    <string name="movie_synopsis_label">Synopsis:</string>
+    <string name="movie_synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi odio, ultrices in nibh non, suscipit fringilla ante. Pellentesque ultricies tempus tellus at venenatis. Vivamus at est vel nulla imperdiet porttitor sit amet dapibus lacus. Quisque urna eros, placerat vitae tellus id, sodales tristique ex. Nam at vehicula risus. Donec tortor orci, pharetra nec lectus nec, malesuada porttitor purus.</string>
+</resources>

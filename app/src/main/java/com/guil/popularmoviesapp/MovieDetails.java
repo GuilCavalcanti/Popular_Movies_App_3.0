@@ -1,17 +1,13 @@
 package com.guil.popularmoviesapp;
 
 import android.content.Context;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.guil.popularmoviesapp.NetworkUtils.JsonParser;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.lang.ref.WeakReference;
 import java.util.List;
 
@@ -56,7 +52,6 @@ public class MovieDetails {
             releaseDate.setText(parseDate(checkForNull(json.getString("release_date"))));
             rating.setText(checkForNull(json.getString("vote_average")));
             synopsis.setText(checkForNull(json.getString("overview")));
-            Log.i("Json Rating", json.getString("vote_average"));
         } catch(JSONException e) {
             e.printStackTrace();
         }
@@ -65,10 +60,8 @@ public class MovieDetails {
     private String checkForNull(String object) {
 
         if (object == null || object.equals("")) {
-
             return "Information Not Available";
         } else {
-
             return object;
         }
     }

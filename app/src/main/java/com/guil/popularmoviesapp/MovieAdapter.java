@@ -20,14 +20,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
     private List<String> imagesUrls;
     private Context mContext;
-    private MovieDetails movieDetails;
     public Intent intent;
     public String sort;
 
-    public MovieAdapter(List<String> mImagesUrls, Context mContext, MovieDetails movieDetails) {
+    public MovieAdapter(List<String> mImagesUrls, Context mContext) {
         this.imagesUrls = mImagesUrls;
         this.mContext = mContext;
-        this.movieDetails = movieDetails;
         this.sort = "popular";
     }
 
@@ -58,14 +56,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
 
-               // movieDetails.buildDetails(imagesUrls, position);
                 intent = new Intent(v.getContext(), MoviesDetailsActivity.class);
                 intent.putStringArrayListExtra("imgURLs", (ArrayList<String>) imagesUrls);
                 intent.putExtra("imgIndex", position);
                 intent.putExtra("sort", sort);
                 mContext.startActivity(intent);
-                //Log.d("Adapter attach", "MovieDetails Poster Clicked");
-                //Toast.makeText(mContext, "MovieDetails Poster Clicked", Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -14,8 +14,6 @@ public class CallAdapter {
     private View viewPoster;
     private WeakReference<Context> contextRef;
 
-    private MovieDetails movieDetails;
-
     public CallAdapter(Context context, View view) {
 
         this.contextRef = new WeakReference<>(context);
@@ -30,7 +28,7 @@ public class CallAdapter {
         recyclerView = viewPoster.findViewById(R.id.recycler_view);
         layoutManager = new GridLayoutManager(contextRef.get(), NUM_COLUMNS);
         recyclerView.setLayoutManager(layoutManager);
-        movieAdapter = new MovieAdapter(imgUrls, contextRef.get(), movieDetails);
+        movieAdapter = new MovieAdapter(imgUrls, contextRef.get());
         recyclerView.setAdapter(movieAdapter);
     }
 

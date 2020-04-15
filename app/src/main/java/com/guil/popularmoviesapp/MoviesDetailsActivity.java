@@ -1,19 +1,16 @@
 package com.guil.popularmoviesapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.List;
 
 public class MoviesDetailsActivity extends AppCompatActivity {
 
     public ImageView moviePoster;
     public MovieDetails movieDetails;
-
     public List<String> urls;
     public int indexImg;
     public String sort;
